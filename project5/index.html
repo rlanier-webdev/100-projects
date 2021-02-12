@@ -1,0 +1,32 @@
+<!--
+    Author: RaShunda Lanier
+    Email: dev@citygirlcodes.me
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css"  type="text/css">
+
+    <script src="timeconverter.js"></script>
+    
+    <title>Time to Decimal Hours Converter</title>
+</head>
+<body>
+    <section>
+        <h1>Hours/Minutes to Decimal Hours Calculator</h1>
+
+        <div class="converter__container">
+            <label for="hrs">Hours: </label><input type="number" id="hrs" name="hrs" maxlength="2" oninput="convertTime()">
+            
+            <label for="mins">Mins: </label><input type="number" id="mins" name="mins" pattern="\d*" maxlength="4" oninput="convertTime()">
+        </div>
+        
+        <p id="message"></p>
+        <p id="temp"></p>
+    </section>
+</body>
+</html>

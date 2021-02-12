@@ -1,0 +1,111 @@
+/* 
+12-3-20 QA
+1. Fix the spacing...pretty much everywhere. It looks weird when the message is not there. 
+    - Try extending the card only when the message is displayed.
+    
+*/
+
+@import url("https://use.typekit.net/rhm3qjl.css");
+
+*{
+    margin: auto;
+    font-family: acumin-pro-semi-condensed, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+html {
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+body {
+    height: 100vh;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+section {
+    background: rgb(255, 255, 255);
+    padding: 50px;
+    position: relative;
+    top: 25%;
+    
+    width: 550px;
+    overflow: hidden;
+    box-shadow: 8px 10px 16px rgba(0,0,0,0.1);
+    transform: translateZ(0);
+}
+
+h1 {
+    text-align: center;
+}
+
+.converter__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 25px 0;
+}
+input {
+    padding: 15px;
+    width: 70px;
+    text-align: center;
+    font-size: 20px;
+}
+label {
+    text-transform: uppercase;
+}
+
+button {
+    display:inline-block;
+    padding: 10px;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#000000;
+    text-align:center;
+    transition: all 0.2s;
+}
+
+button:hover{
+    color:#373B44;
+
+}
+#error {
+    text-align: center;
+    padding: 25px 0;
+    font-size: 25px;
+    color: #000;
+}
+#message {
+    text-align: center;
+    padding: 25px 0;
+    font-size: 25px;
+    color: #104aa7;
+    
+}
+#temp {
+    text-align: center;
+    padding: 25px 0;
+    font-size: 25px;
+    color: green;
+    
+}
