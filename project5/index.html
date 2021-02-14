@@ -17,16 +17,20 @@
 </head>
 <body>
     <section>
-        <h1>Hours/Minutes to Decimal Hours Calculator</h1>
+        <div>
+            <h1>Time to Decimal Hours Converter</h1>
 
-        <div class="converter__container">
-            <label for="hrs">Hours: </label><input type="number" id="hrs" name="hrs" maxlength="2" oninput="convertTime()">
-            
-            <label for="mins">Mins: </label><input type="number" id="mins" name="mins" pattern="\d*" maxlength="4" oninput="convertTime()">
+            <div class="converter__container">
+                
+                <input type="number" id="hrs" maxlength="2" placeholder="Hours">
+                <!-- <span class="colon">:</span> -->
+                <input type="number" id="mins" maxlength="2" placeholder="Minutes">
+
+                <button onclick="calcHours()" title="Convert">Convert</button>
+            </div>
         </div>
-        
+
         <p id="message"></p>
-        <p id="temp"></p>
     </section>
 </body>
 </html>

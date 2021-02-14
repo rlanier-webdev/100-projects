@@ -1,7 +1,7 @@
 /*  
-
+    Project: Time to Decimal Hours
     Author: RaShunda Lanier
-    Email: dev@citygirlcodes.me
+    Email: rashunda@citygirlcodes.me
 
     Convert time (hours/minutes) to decimal hours
     1 min = .02 decimal hours, 2 min = .03 decimal hours, 25 mins = .42 decimal hours
@@ -15,54 +15,31 @@
         - time
         - decimal hours
 
+    Validate Input
+    - If input is NAN then display error as the message instead
 */
 
 
-function convertTime(){
 
-    var str = " Decimal Hours";
-    var errorMsg = "Error: Must be numbers only."
-    
-    var hrs = parseFloat(document.getElementById("hrs").value);
-    var mins = parseFloat(document.getElementById("mins").value);
-    
+function calcHours() {
 
-    // BUG: Empty input caused NaN error, set to 0 instead
-    // parseFloat treats an empty input as NaN
+    //1. get hours input
+    var hours = parseFloat(document.getElementById("hrs").value); 
+    //2. get mins input
+    var mins = parseFloat(document.getElementById("mins").value); 
 
-    /* 
-        I need to be able to convert an empty string to 0
-        I need to be able to throw an error when an invalid char is entered
-    */
-
-/*  hrs = hrsInput == '' ? 0 : hrsInput;
-    mins = minsInput == '' ? 0 : minsInput; */
-    
-
-
-    if (isNaN(hrs) || isNaN(mins)) {
- 
-        // Change error message to red
+    //Validate Input: If input is not a number then display error as the message instead
+    if (isNaN(hours) || isNaN(mins)) {
         document.getElementById("message").style.color = "red";
-
-        // Display error message
-        document.getElementById("message").innerHTML = errorMsg;
+        document.getElementById("message").style.fontSize = "18px";
+        document.getElementById("message").innerHTML = "Error: Please enter a number.";
         
     } else {
+        //3. convert to decimal hours
+        var dHours = hours + (mins / 60);
 
-        // Calculate decimal hours
-        var dHrs = hrs + (mins / 60);
-        
-        // Round to 2 decimal points
-        dHrs = dHrs.toFixed(2);
-        
-        // Change color back to original
-        document.getElementById("message").style.color = "#104aa7";
-
-        // Display decimal hours
-        document.getElementById("message").innerHTML = dHrs.concat(str);
+        document.getElementById("message").style.color = "#1A4645";
+        document.getElementById("message").style.fontSize = "25px";
+        document.getElementById("message").innerHTML = dHours.toFixed(2) + " Decimal Hours";
     }
-
 }
-
-

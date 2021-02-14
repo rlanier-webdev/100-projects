@@ -1,111 +1,87 @@
-/* 
-12-3-20 QA
-1. Fix the spacing...pretty much everywhere. It looks weird when the message is not there. 
-    - Try extending the card only when the message is displayed.
-    
-*/
-
-@import url("https://use.typekit.net/rhm3qjl.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 *{
-    margin: auto;
-    font-family: acumin-pro-semi-condensed, sans-serif;
-    font-style: normal;
-    font-weight: 400;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
-html {
-    background: #373B44;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
-}
-
 body {
-    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #051821;
+    color: #1A4645;
+    font-size: 16px;
 }
+h1 {
+    margin-top: 10px;
+}
+section {
+    text-align: center;
+    background-color: white;
+    height: 400px;
+    width: 325px;
+    margin: 100px auto;
+    padding: 25px;
+    border-radius: 2%;
+    -webkit-border-radius: 2%;
+    -moz-border-radius: 2%;
+    -ms-border-radius: 2%;
+    -o-border-radius: 2%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.converter__container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    padding: 0 25px;
+}
+input, button {
+    height: 50px;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    border: none;
 
+}
+input {
+    font-size: 25px;
+    color: #777771;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+input:focus {
+    border: none;
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
 }
-
-section {
-    background: rgb(255, 255, 255);
-    padding: 50px;
-    position: relative;
-    top: 25%;
-    
-    width: 550px;
-    overflow: hidden;
-    box-shadow: 8px 10px 16px rgba(0,0,0,0.1);
-    transform: translateZ(0);
-}
-
-h1 {
-    text-align: center;
-}
-
-.converter__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    padding: 25px 0;
-}
-input {
-    padding: 15px;
-    width: 70px;
-    text-align: center;
-    font-size: 20px;
-}
-label {
-    text-transform: uppercase;
-}
-
 button {
-    display:inline-block;
-    padding: 10px;
-    border:0.1em solid #FFFFFF;
-    margin:0 0.3em 0.3em 0;
-    border-radius:0.12em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-weight:300;
-    color:#000000;
-    text-align:center;
-    transition: all 0.2s;
+    font-size: 20px;
+    text-transform: uppercase;
+    background-color: #F58800;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    outline:none; 
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
-
-button:hover{
-    color:#373B44;
-
-}
-#error {
-    text-align: center;
-    padding: 25px 0;
-    font-size: 25px;
-    color: #000;
+button:hover {
+    background-color: #e0881c;
 }
 #message {
     text-align: center;
     padding: 25px 0;
     font-size: 25px;
-    color: #104aa7;
-    
-}
-#temp {
-    text-align: center;
-    padding: 25px 0;
-    font-size: 25px;
-    color: green;
-    
+
 }
