@@ -1,0 +1,59 @@
+/* 
+  Stylesheet for Thank You Page
+*/
+
+* {
+  box-sizing:border-box; /*prevents inputs from going outside of parent div */
+  font-family: acumin-pro-extra-condensed, Impact, Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #1a1616;
+}
+
+body{
+  height: 100%;
+  margin: 0;
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#thankYouContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+#thankYouContent {
+  text-align: center;
+  width:600px;
+  background-color: #fff;
+  box-shadow:  4px 3px 7px -2px rgba(0,0,0,0.34);
+  padding: 20px;
+  padding-bottom: 40px;
+}
+#thankYouHeader{ 
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    margin: 0;
+    
+}
+#thankYouContent h2{
+  font-size: 20px;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+#yourInfo p{
+  margin:0;
+}
+.thankYouLabels{
+  font-weight: bold;
+}
+.thankYouLabels h1{
+  margin-bottom: 0;
+  font-size: 25px;
+
+}
